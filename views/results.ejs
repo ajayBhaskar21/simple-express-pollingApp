@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Poll Results</title>
+</head>
+<body>
+    <h1>Results for: <%= poll.question %></h1>
+    <ul>
+        <% poll.options.forEach(option => { %>
+            <li><%= option.text %>: <%= option.votes %> votes</li>
+        <% }); %>
+    </ul>
+    <a href="/">Back to Home</a>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Polling App</title>
+</head>
+<body>
+    <h1>All Polls</h1>
+    <a href="/polls/new">Create a New Poll</a>
+    <ul>
+        <% polls.forEach(poll => { %>
+            <li>
+                <a href="/polls/<%= poll._id %>"><%= poll.question %></a>
+            </li>
+        <% }); %>
+    </ul>
+</body>
+</html>
